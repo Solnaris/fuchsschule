@@ -54,4 +54,5 @@ const server = createServer(async (req, res) => {
 
 server.listen(PORT, () => {
   console.log(`Fuchsschule läuft auf http://localhost:${PORT}`);
+  console.log('192.168.0.85:3000');
 });
