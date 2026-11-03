@@ -1,0 +1,83 @@
+/* maumau/maumau.css
+   Only Mau-Mau specific design. Colors come from the variables in /style.css. */
+
+#game {
+  display: grid;
+  gap: 2rem;
+}
+
+.area-title {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+/* A row of cards; wraps to the next line on small screens. */
+.hand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Middle of the table: draw pile and discard pile next to each other. */
+.table {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.pile {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.pile__label {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* One card. Card faces stay light in dark mode, like real cards. */
+.card {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  width: 4.5rem;
+  height: 6.5rem;
+  color: #1f2430;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+  user-select: none;
+}
+
+.card--red {
+  color: #c92a2a;
+}
+
+.card__rank {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.card__suit {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+/* Back side of a card. */
+.card--back {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--accent) 0 0.5rem,
+    color-mix(in srgb, var(--accent) 70%, black) 0.5rem 1rem
+  );
+  border-color: var(--accent);
+}
